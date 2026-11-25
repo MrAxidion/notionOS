@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d16">
+  <meta name="description" content="CONTENT OS is a Notion-based workspace to plan, organize, produce, publish and track your content in one place.">
+  <title>CONTENT OS — Your content, under control.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080d16;--panel:#0e1724;--panel2:#111f30;--line:rgba(173,198,229,.13);--text:#f4f7fb;--muted:#9aabc0;--blue:#55b6ff;--cyan:#76e0e8;--green:#b4f3d0;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 4%,rgba(31,112,174,.18),transparent 34%),radial-gradient(ellipse at 8% 28%,rgba(27,72,126,.13),transparent 30%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:800 19px Manrope,sans-serif;letter-spacing:-.8px}.brand span{color:var(--blue)}.navlinks{display:flex;gap:30px;color:#b6c4d5;font-size:13px}.navlinks a:hover{color:#fff}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:12px 18px;font-weight:700;font-size:13px;transition:.2s;border:1px solid transparent}
+    .nav-cta,.btn-primary{background:linear-gradient(110deg,#57baff,#6ad8e5);color:#06111d;box-shadow:0 8px 30px rgba(63,174,239,.17)}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .btn-ghost{border-color:var(--line);background:rgba(255,255,255,.025);color:#eaf3fc}.btn-ghost:hover{border-color:rgba(85,182,255,.55);background:rgba(85,182,255,.07)}
+    .hero{padding:92px 0 72px;display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(85,182,255,.28);background:rgba(85,182,255,.07);padding:7px 11px;border-radius:99px;color:#a9dfff;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+    .dot{height:7px;width:7px;border-radius:50%;background:#70e2c0;box-shadow:0 0 12px #70e2c0}.hero h1{font:800 clamp(42px,5.3vw,68px)/1.08 Manrope,sans-serif;letter-spacing:-3px;margin:24px 0 20px}.gradient{background:linear-gradient(100deg,#fff 8%,#8ed5ff 54%,#8be5dd);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:540px;color:var(--muted);font-size:17px;line-height:1.8;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.micro{font-size:11px;color:#71849b;margin-top:18px}
+    .preview{position:relative}.glow{position:absolute;inset:12% 8%;background:#238ad0;filter:blur(90px);opacity:.22;z-index:0}.browser{position:relative;z-index:1;border:1px solid rgba(173,198,229,.2);background:#111923;border-radius:16px;padding:10px;box-shadow:0 30px 90px rgba(0,0,0,.48);transform:perspective(1000px) rotateY(-5deg) rotateX(2deg)}
+    .browserbar{height:28px;display:flex;align-items:center;gap:6px;padding:0 7px 9px;color:#8293a8;font-size:9px}.browserbar i{height:6px;width:6px;border-radius:50%;background:#64758a}.browserbar span{margin-left:8px}.screen{border:1px solid rgba(255,255,255,.08);border-radius:9px;overflow:hidden;background:#1d1e1d}.screen img{display:block;width:100%;height:auto;opacity:.96}.float-card{position:absolute;z-index:2;right:-20px;bottom:20px;background:#101d2b;border:1px solid rgba(119,196,241,.27);padding:13px 16px;border-radius:12px;box-shadow:0 15px 40px #0008}.float-card b{display:block;font:700 12px Manrope}.float-card small{color:var(--muted);font-size:10px}
+    .trustline{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;color:#8293a8;text-align:center;font-size:11px;letter-spacing:1.4px;text-transform:uppercase}
+    section{padding:88px 0}.section-head{max-width:650px;margin:0 auto 42px;text-align:center}.kicker{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}.section-head h2{font:800 clamp(30px,4vw,43px)/1.15 Manrope,sans-serif;letter-spacing:-1.6px;margin:12px 0}.section-head p{color:var(--muted);margin:0;font-size:15px}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{background:linear-gradient(145deg,rgba(20,37,56,.85),rgba(12,21,33,.85));border:1px solid var(--line);border-radius:15px;padding:23px;min-height:185px}.feature-icon{height:38px;width:38px;border-radius:11px;display:grid;place-items:center;background:rgba(85,182,255,.12);color:#8bd4ff;font-size:17px;margin-bottom:19px}.feature h3{font:700 16px Manrope;margin:0 0 8px}.feature p{font-size:13px;color:var(--muted);margin:0;line-height:1.7}
+    .showcase{background:linear-gradient(180deg,rgba(16,29,44,.35),rgba(8,13,22,0));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.showcase-copy h2{font:800 36px/1.18 Manrope;letter-spacing:-1.4px;margin:12px 0}.showcase-copy p{color:var(--muted);font-size:14px;max-width:460px}.checks{list-style:none;padding:0;margin:22px 0;display:grid;gap:11px;color:#dce8f4;font-size:13px}.checks li:before{content:"✓";color:#75dfbd;font-weight:800;margin-right:10px}.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#202020;box-shadow:0 20px 60px #0005}.shot img{display:block;width:100%;height:auto}.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.gallery figure{margin:0;background:#101923;border:1px solid var(--line);border-radius:13px;overflow:hidden}.gallery img{width:100%;display:block}.gallery figcaption{padding:12px 14px;color:#cbd8e6;font-size:12px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;border:1px solid var(--line);border-radius:14px;background:rgba(15,26,40,.65)}.num{font:800 12px Manrope;color:var(--blue)}.step h3{font:700 16px Manrope;margin:12px 0 6px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .pricing{max-width:720px;margin:auto;border:1px solid rgba(85,182,255,.3);border-radius:18px;padding:32px;background:linear-gradient(145deg,rgba(18,39,59,.92),rgba(12,20,31,.96));display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;box-shadow:0 22px 70px rgba(0,0,0,.2)}.pricing h3{font:800 24px Manrope;margin:5px 0}.pricing p{color:var(--muted);font-size:13px;margin:0}.price-tag{color:#a7dcff;font:800 27px Manrope;white-space:nowrap}.price-tag small{display:block;color:#8295aa;font:500 10px "DM Sans";text-align:right}
+    .faq{max-width:780px;margin:auto;display:grid;gap:10px}.faq details{border:1px solid var(--line);background:rgba(15,26,40,.58);border-radius:11px;padding:17px 19px}.faq summary{cursor:pointer;font-weight:700;font-size:14px}.faq details p{color:var(--muted);font-size:13px;margin:12px 0 0}
+    .final-cta{text-align:center;padding:55px 25px;border:1px solid rgba(85,182,255,.25);border-radius:20px;background:radial-gradient(ellipse at 50% 0,rgba(55,145,205,.18),transparent 65%),#0d1724}.final-cta h2{font:800 clamp(28px,4vw,40px) Manrope;letter-spacing:-1.3px;margin:0 0 10px}.final-cta p{color:var(--muted);font-size:14px;margin:0 0 23px}
+    footer{border-top:1px solid var(--line);padding:27px 0;color:#71849a;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.mobile-menu{display:none}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:42px;padding-top:66px}.hero-copy{max-width:680px}.preview{max-width:680px;margin:auto;width:100%}.browser{transform:none}.feature-grid{grid-template-columns:repeat(2,1fr)}.showcase-grid{grid-template-columns:1fr}.showcase-copy{order:0}.gallery{order:1}}
+    @media(max-width:600px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:70px}.navlinks{display:none}.nav-cta{padding:10px 12px;font-size:11px}.hero{padding:58px 0 54px}.hero h1{letter-spacing:-2px}.hero p{font-size:15px}.float-card{right:-5px;bottom:10px}.trustline{font-size:9px;line-height:1.8}section{padding:66px 0}.feature-grid,.steps,.gallery{grid-template-columns:1fr}.feature{min-height:auto}.showcase-copy h2{font-size:30px}.pricing{grid-template-columns:1fr;padding:24px}.price-tag small{text-align:left}.pricing .btn{width:100%}.footer-inner{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#">CONTENT<span>OS</span>.</a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#features">Features</a><a href="#preview">Preview</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-cta whatsapp-link" href="#contact">Get access <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> Your content workflow, organized</div>
+        <h1>Make content.<br><span class="gradient">Not chaos.</span></h1>
+        <p>Plan, organize, produce, publish and track your content from one focused Notion workspace. Spend less time managing the process — and more time creating.</p>
+        <div class="actions">
+          <a class="btn btn-primary whatsapp-link" href="#contact">Get CONTENT OS <span>↗</span></a>
+          <a class="btn btn-ghost" href="#preview">Explore the workspace <span>↓</span></a>
+        </div>
+        <div class="micro">A Notion-based content management system · Built for creators and teams</div>
+      </div>
+      <div class="preview">
+        <div class="glow"></div>
+        <div class="browser">
+          <div class="browserbar"><i></i><i></i><i></i><span>CONTENT OS / Workspace preview</span></div>
+          <div class="screen"><img src="assets/content-database.png" alt="CONTENT OS Notion content database preview"></div>
+        </div>
+        <div class="float-card"><b>One connected workspace</b><small>Content · Series · Analytics · Assets</small></div>
+      </div>
+    </section>
+
+    <div class="trustline">Plan clearly &nbsp;·&nbsp; Produce consistently &nbsp;·&nbsp; Publish confidently</div>
+
+    <section class="wrap" id="features">
+      <div class="section-head"><div class="kicker">The workspace</div><h2>Everything your content workflow needs.</h2><p>A connected system that keeps your ideas, production stages, publishing schedule and supporting resources together.</p></div>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon">✦</div><h3>Content Database</h3><p>Keep every content item in one central database with status, publish date, format and platform.</p></article>
+        <article class="feature"><div class="feature-icon">▤</div><h3>Production Pipeline</h3><p>See what is an idea, in scripting, in editing or ready to publish with a visual workflow.</p></article>
+        <article class="feature"><div class="feature-icon">▦</div><h3>Content Calendar</h3><p>Plan upcoming publishing dates and get a clearer view of what is scheduled.</p></article>
+        <article class="feature"><div class="feature-icon">◎</div><h3>Series Management</h3><p>Group related videos and posts into repeatable series and connect them to your content.</p></article>
+        <article class="feature"><div class="feature-icon">↗</div><h3>Performance Tracking</h3><p>Connect content with analytics records and track views as your library grows.</p></article>
+        <article class="feature"><div class="feature-icon">⌁</div><h3>Asset Library</h3><p>Keep links and resources associated with the content they support.</p></article>
+      </div>
+    </section>
+
+    <section class="showcase" id="preview">
+      <div class="wrap showcase-grid">
+        <div class="showcase-copy">
+          <div class="kicker">Inside CONTENT OS</div>
+          <h2>A clear view of every stage — from idea to published.</h2>
+          <p>Use focused views to work the way you want: a master table, a weekly view, a production pipeline, a calendar or content grouped by series.</p>
+          <ul class="checks"><li>Know what needs your attention next</li><li>Keep publishing dates visible</li><li>Connect series, analytics and assets</li><li>Adapt the workspace to your workflow</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about access ↗</a>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/content-pipeline.png" alt="Content pipeline board"><figcaption>Production pipeline and status views</figcaption></figure>
+          <figure><img src="assets/series-and-analytics.png" alt="Series and analytics databases"><figcaption>Series and analytics organization</figcaption></figure>
+          <figure><img src="assets/assets-library.png" alt="Assets database"><figcaption>Central asset library</figcaption></figure>
+          <figure><img src="assets/content-fields.png" alt="Content database fields"><figcaption>Content properties and tracking</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="how">
+      <div class="section-head"><div class="kicker">Simple workflow</div><h2>From scattered tasks to a repeatable process.</h2><p>CONTENT OS gives your content operation a home, without adding another complicated tool to learn.</p></div>
+      <div class="steps">
+        <article class="step"><div class="num">01 / PLAN</div><h3>Capture and organize</h3><p>Add ideas, choose a format and platform, and assign a publishing date.</p></article>
+        <article class="step"><div class="num">02 / PRODUCE</div><h3>Move through the pipeline</h3><p>Track each piece as it moves from idea to script, editing and ready-to-publish.</p></article>
+        <article class="step"><div class="num">03 / REVIEW</div><h3>Publish and measure</h3><p>Keep your content organized and connect performance records to your work.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="pricing">
+        <div><div class="kicker">Get started</div><h3>CONTENT OS</h3><p>Want to see the system, ask a question or get access? Message us on WhatsApp for product details and current pricing.</p></div>
+        <div><div class="price-tag">Let's talk<small>Pricing shared on request</small></div><a class="btn btn-primary whatsapp-link" href="#">Chat on WhatsApp ↗</a></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="faq">
+      <div class="section-head"><div class="kicker">FAQ</div><h2>Good to know.</h2><p>A few quick answers before you get started.</p></div>
+      <div class="faq">
+        <details><summary>Is CONTENT OS a separate app?</summary><p>No. CONTENT OS is a workspace template built in Notion. You use it inside your own Notion account.</p></details>
+        <details><summary>Do I need to know Notion?</summary><p>Basic familiarity with Notion will help. You can also ask us for guidance on setup and getting started.</p></details>
+        <details><summary>Can I customize it?</summary><p>Yes. You can adapt database entries, properties and views to match your content workflow.</p></details>
+        <details><summary>How do I get access?</summary><p>Send us a WhatsApp message. We'll share the current product details, pricing and access process.</p></details>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="final-cta">
+        <div class="kicker">Your next post starts here</div>
+        <h2>Take control of your content workflow.</h2>
+        <p>One workspace. A clearer process. More room to create.</p>
+        <a class="btn btn-primary whatsapp-link" href="#">Talk to us on WhatsApp ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><a class="brand" href="#">CONTENT<span>OS</span>.</a><span>© <span id="year"></span> CONTENT OS. All rights reserved.</span><span>Built for people who create.</span></div></footer>
+  <script>
+    // IMPORTANT: Replace this with your WhatsApp number in international format.
+    // Morocco example: 2126XXXXXXXX (no +, spaces or leading 0).
+    const WHATSAPP_NUMBER = "212693245712";
+    const MESSAGE = "Hi! I'm interested in CONTENT OS. Can you share the details and pricing?";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll(".whatsapp-link").forEach((link) => {
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(MESSAGE)}`;
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+  </script>
+</body>
+</html>
